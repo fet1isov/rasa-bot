@@ -1,0 +1,750 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Здравствуйте!
+      - Привет!
+      - Добрый день!
+      - Здравствуй!
+      - Приветствую!
+      - Доброе утро!
+      - Добрый вечер!
+      - Здарова!
+      - Привет всем!
+      - Рад вас видеть!
+      - Привет!
+      - Привет-привет!
+      - Доброго дня!
+      - Доброго вечера!
+      - С добрым утром!
+      - С добрым днем!
+      - С добрым вечером!
+      - Добро пожаловать!
+      - Рад знакомству!
+      - Рада вас видеть!
+      - Рад встрече!
+      - Приветствую вас всех!
+      - Приветик!
+      - Приветствую, друзья!
+      - Приветики всем!
+      - Доброго тебе дня!
+      - Доброе утро всем!
+      - Добро пожаловать!
+      - Приветствую вас сегодня!
+      - Рад тебя видеть!
+      - Привет, как дела?
+      - Здрасте!
+
+  - intent: apply_position
+    examples: |
+      - Я хочу подать заявку на [Data Scientist](position).
+      - Я интересуюсь позицией [Data Engineer](position).
+      - Мне нужна работа [Project Manager](position).
+      - Я хотел бы претендовать на должность [MLOps Engineer](position).
+      - Меня интересует вакансия [Data Analyst](position).
+      - Я стремлюсь занять роль [Project Manager](position).
+      - Я хочу работать на позиции [Data Scientist](position).
+      - Подаю заявку на [MLOps Engineer](position).
+      - Мне бы хотелось работать в должности [Data Engineer](position).
+      - Я ищу работу на позицию [Data Analyst](position).
+      - Я желаю присоединиться к команде как [Project Manager](position).
+      - Хочу подать колок заявку на [Data Scientist](position).
+      - Я заинтересован в роли [MLOps Engineer](position).
+      - Я хочу подать заявку на [Data Scientist](position).
+      - Подал(а) резюме на позицию [Data Engineer](position).
+      - Интересует вакансия [Project Manager](position).
+      - Хочу работать как [MLOps Engineer](position).
+      - Я претендую на [Data Analyst](position).
+      - Подаю заявку на роль [Project Manager](position).
+      - Рассматриваю возможность занять позицию [Data Scientist](position).
+      - Подал(а) себя на [MLOps Engineer](position) вакансию.
+      - Хочу присоединиться к вашей команде как [Data Engineer](position).
+      - Интересуюсь ролью [Data Analyst](position).
+      - Занимаюсь поиском работы на позицию [Project Manager](position).
+      - Я подал(а) заявку на [Data Scientist](position).
+      - Рассматриваю вакансии на [MLOps Engineer](position).
+      - Хочу занять должность [Data Engineer](position) у вас.
+      - Подал(а) заявку на [Data Analyst](position).
+      - Интересуюсь возможностью работать на [Project Manager](position).
+      - Я претендую на [Data Scientist](position) позицию.
+      - Хочу работать на [MLOps Engineer](position) должности.
+      - Подал мнение на [Data Engineer](position).
+      - Интересуюсь вакансией [Data Analyst](position).
+      - Хочу занять позицию [Project Manager](position) в вашей компании.
+      - Я подал(а) резюме на [Data Scientist](position).
+      - Рассматриваю возможность работы на [MLOps Engineer](position).
+      - Хочу присоединиться как [Data Engineer](position).
+      - Подал(а) заявку на [Data Analyst](position) роль.
+      - Интересуюсь позицией [Project Manager](position).
+      - Я претендую на работу как [Data Scientist](position).
+      - Хочу занять должность [MLOps Engineer](position).
+      - Подал(а) заявку на [Data Engineer](position).
+      - Интересуюсь вакансиями [Data Analyst](position).
+      - Хочу работать на позицию [Project Manager](position).
+      - Я подал(а) себя на [Data Scientist](position).
+      - Рассматриваю вакансии [MLOps Engineer](position).
+      - Хочу присоединиться к команде как [Data Engineer](position).
+      - Меня интересует работа как [MLOps Engineer](position).
+      - Я хочу работать на должности [Project Manager](position).
+      - Подаю заявку на [Data Scientist](position).
+      - Я заинтересован в позиции [Data Engineer](position).
+      - Хотел бы подать заявку на [Data Analyst](position).
+      - Я стремлюсь занять должность [MLOps Engineer](position).
+      - Меня интересует вакансия [Project Manager](position).
+      - Я хочу претендовать на должность [Data Scientist](position).
+      - Я ищу работу на позицию [Data Engineer](position).
+      - Я заинтересован в роли [Data Analyst](position).
+      - Хочу работать в качестве [MLOps Engineer](position).
+      - Я хочу подать заявку на [Project Manager](position).
+      - Мне интересна позиция [Data Scientist](position).
+      - Я хотел бы претендовать на [Data Engineer](position).
+      - Меня интересует работа на должности [Data Analyst](position).
+      - Я стремлюсь занять роль [MLOps Engineer](position).
+      - Хочу подать заявку на [Project Manager](position).
+      - Я заинтересован в позиции [Data Scientist](position).
+      - Мне бы хотелось работать на позиции [Data Engineer](position).
+      - Я ищу работу на должность [Data Analyst](position).
+      - Подаю заявку на [MLOps Engineer](position).
+      - Я желаю присоединиться к команде как [Project Manager](position).
+      - Я хочу работать на позиции [Data Scientist](position).
+      - Мне интересно занять должность [Data Engineer](position).
+      - Я хочу претендовать на [Data Analyst](position).
+      - Я заинтересован в роли [MLOps Engineer](position).
+      - Хотелось бы работать в должности [Project Manager](position).
+      - Я подаю заявку на [Data Scientist](position).
+      - Я заинтересован в вакансии [Data Engineer](position).
+      - Мне бы хотелось претендовать на должность [Data Analyst](position).
+      - Я хочу присоединиться как [MLOps Engineer](position).
+      - Я по поводу вакансиин а позиции [Project Manager](position).
+      - Хочу подать заявку на вакансию [Data Scientist](position).
+      - Я ищу возможность работать в вашейц компании на позиции [Data Engineer](position).
+      - Я желаю занять роль [Data Analyst](position).
+      - Меня интересует работа как [MLOps Engineer](position).
+      - Я хочу работать на должности [Project Manager](position).
+      - Подаю заявку на [Data Scientist](position).
+      - Я заинтересован в позиции [Data Engineer](position).
+      - Хотел бы подать заявку на [Data Analyst](position).
+      - Я стремлюсь занять должность [MLOps Engineer](position).
+      - Меня интересует вакансия [Project Manager](position).
+      - Я хочу претендовать на должность [Data Scientist](position).
+      - Я ищу работу на позицию [Data Engineer](position).
+      - Я заинтересован в роли [Data Analyst](position).
+      - Хочу работать в качестве [MLOps Engineer](position).
+      - Я хочу подать заявку на [Project Manager](position).
+      - Мне интересна позиция [Data Scientist](position).
+      - Я хотел бы претендовать на [Data Engineer](position).
+      - Меня интересует работа на должности [Data Analyst](position).
+      - Я стремлюсь занять роль [MLOps Engineer](position).
+      - Хочу подать заявку на [Project Manager](position).
+      - Я заинтересован в позиции [Data Scientist](position).
+      - Мне бы хотелось работать на позиции [Data Engineer](position).
+      - Я ищу работу на должность [Data Analyst](position).
+      - Подаю заявку на [MLOps Engineer](position).
+      - Я желаю присоединиться к команде как [Project Manager](position).
+      - Я хочу работать на позиции [Data Scientist](position).
+      - Мне интересно занять должность [Data Engineer](position).
+      - Я хочу претендовать на [Data Analyst](position).
+      - Я заинтересован в роли [MLOps Engineer](position).
+      - Хотелось бы работать в должности [Project Manager](position).
+      - Я подаю заявку на [Data Scientist](position).
+      - Я заинтересован в вакансии [Data Engineer](position).
+      - Мне бы хотелось претендовать на должность [Data Analyst](position).
+      - Я хочу присоединиться как [MLOps Engineer](position).
+      - Я заинтересован в работе на позиции [Project Manager](position).
+      - Хочу подать заявку на [Data Scientist](position).
+      - Я ищу возможность работать на позиции [Data Engineer](position).
+      - Я желаю занять роль [Data Analyst](position).
+      - Меня интересует работа как [MLOps Engineer](position).
+      - Я хочу работать на должности [Project Manager](position).
+      - Подаю заявку на [Data Scientist](position).
+      - Я заинтересован в позиции [Data Engineer](position).
+      - Хотел бы подать заявку на [Data Analyst](position).
+      - Я стремлюсь занять должность [MLOps Engineer](position).
+      - Меня интересует вакансия [Project Manager](position).
+      - Я хочу претендовать на должность [Data Scientist](position).
+      - Я ищу работу на позицию [Data Engineer](position).
+      - Я заинтересован в роли [Data Analyst](position).
+      - Хочу работать в качестве [MLOps Engineer](position).
+      - Я хочу подать заявку на [Project Manager](position).
+      - Мне интересна позиция [Data Scientist](position).
+      - Я хотел бы претендовать на [Data Engineer](position).
+      - Меня интересует работа на должности [Data Analyst](position).
+      - Я стремлюсь занять роль [MLOps Engineer](position).
+      - Хочу подать заявку на [Project Manager](position).
+      - Я заинтересован в позиции [Data Scientist](position).
+      - Мне бы хотелось работать на позиции [Data Engineer](position).
+      - Я ищу работу на должность [Data Analyst](position).
+      - Подаю заявку на [MLOps Engineer](position).
+      - Я желаю присоединиться к команде как [Project Manager](position).
+      - Я хочу работать на позиции [Data Scientist](position).
+      - Мне интересно занять должность [Data Engineer](position).
+      - Я хочу претендовать на [Data Analyst](position).
+      - Я заинтересован в роли [MLOps Engineer](position).
+      - Хотелось бы работать в должности [Project Manager](position).
+      - Я подаю заявку на [Data Scientist](position).
+      - Я заинтересован в вакансии [Data Engineer](position).
+      - Мне бы хотелось претендовать на должность [Data Analyst](position).
+      - Я хочу присоединиться как [MLOps Engineer](position).
+      - Я заинтересован в работе на позиции [Project Manager](position).
+      - Хочу подать заявку на [Data Scientist](position].
+      - Я ищу возможность работать на позиции [Data Engineer](position].
+      - Я желаю занять роль [Data Analyst](position].
+      - Меня интересует работа как [MLOps Engineer](position].
+      - Я хочу работать на должности [Project Manager](position].
+      - Подаю заявку на [Data Scientist](position].
+      - Я заинтересован в позиции [Data Engineer](position].
+      - Хотел бы подать заявку на [Data Analyst](position].
+      - Я стремлюсь занять должность [MLOps Engineer](position].
+      - Меня интересует вакансия [Project Manager](position].
+      - Я хочу претендовать на должность [Data Scientist](position].
+      - Я ищу работу на позицию [Data Engineer](position].
+      - Я заинтересован в роли [Data Analyst](position].
+      - Хочу работать в качестве [MLOps Engineer](position].
+      - Я хочу подать заявку на [Project Manager](position].
+      - Мне интересна позиция [Data Scientist](position].
+      - Я хотел бы претендовать на [Data Engineer](position].
+      - Меня интересует работа на должности [Data Analyst](position].
+      - Я стремлюсь занять роль [MLOps Engineer](position].
+      - Хочу подать заявку на [Project Manager](position].
+      - Я заинтересован в позиции [Data Scientist](position].
+      - Мне бы хотелось работать на позиции [Data Engineer](position].
+      - Я ищу работу на должность [Data Analyst](position].
+      - Подаю заявку на [MLOps Engineer](position].
+      - Я желаю присоединиться к команде как [Project Manager](position].
+      - Я хочу работать на позиции [Data Scientist](position].
+      - Мне интересно занять должность [Data Engineer](position].
+      - Я хочу претендовать на [Data Analyst](position].
+      - Я заинтересован в роли [MLOps Engineer](position].
+      - Хотелось бы работать в должности [Project Manager](position].
+      - Я подаю заявку на [Data Scientist](position].
+      - Я заинтересован в вакансии [Data Engineer](position].
+      - Мне бы хотелось претендовать на должность [Data Analyst](position].
+      - Я хочу присоединиться как [MLOps Engineer](position].
+      - Я заинтересован в работе на позиции [Project Manager](position].
+      - Хочу подать заявку на [Data Scientist](position].
+      - Я ищу возможность работать на позиции [Data Engineer](position].
+      - Я желаю занять роль [Data Analyst](position].
+      - Меня интересует работа как [MLOps Engineer](position].
+      - Я хочу работать на должности [Project Manager](position].
+      - Подаю заявку на [Data Scientist](position].
+      - Я заинтересован в позиции [Data Engineer](position].
+      - Хотел бы подать заявку на [Data Analyst](position].
+      - Я стремлюсь занять должность [MLOps Engineer](position].
+      - Меня интересует вакансия [Project Manager](position].
+      - Я хочу претендовать на должность [Data Scientist](position].
+      - Я ищу работу на позицию [Data Engineer](position].
+      - Я заинтересован в роли [Data Analyst](position].
+      - Хочу работать в качестве [MLOps Engineer](position].
+      - Я хочу подать заявку на [Project Manager](position].
+      - Мне интересна позиция [Data Scientist](position].
+      - Я хотел бы претендовать на [Data Engineer](position].
+      - Меня интересует работа на должности [Data Analyst](position].
+      - Я стремлюсь занять роль [MLOps Engineer](position].
+      - Хочу подать заявку на [Project Manager](position].
+      - Я заинтересован в позиции [Data Scientist](position].
+      - Мне бы хотелось работать на позиции [Data Engineer](position].
+      - Я ищу работу на должность [Data Analyst](position].
+      - Подаю заявку на [MLOps Engineer](position].
+      - Я желаю присоединиться к команде как [Project Manager](position].
+      - Я хочу работать на позиции [Data Scientist](position].
+      - Мне интересно занять должность [Data Engineer](position].
+      - Я хочу претендовать на [Data Analyst](position].
+      - Я заинтересован в роли [MLOps Engineer](position].
+      - Хотелось бы работать в должности [Project Manager](position].
+      - Я подаю заявку на [Data Scientist](position].
+      - Я заинтересован в вакансии [Data Engineer](position].
+      - Мне бы хотелось претендовать на должность [Data Analyst](position].
+      - Я хочу присоединиться как [MLOps Engineer](position].
+      - Я заинтересован в работе на позиции [Project Manager](position].
+      - Хочу подать заявку на [Data Scientist](position].
+      - Я ищу возможность работать на позиции [Data Engineer](position].
+      - Я желаю занять роль [Data Analyst](position].
+      - Меня интересует работа как [MLOps Engineer](position].
+      - Я хочу работать на должности [Project Manager](position].
+      - Подаю заявку на [Data Scientist](position].
+      - Я заинтересован в позиции [Data Engineer](position].
+      - Хотел бы подать заявку на [Data Analyst](position].
+      - Я стремлюсь занять должность [MLOps Engineer](position].
+      - Меня интересует вакансия [Project Manager](position].
+      - Я хочу претендовать на должность [Data Scientist](position].
+      - Я ищу работу на позицию [Data Engineer](position].
+      - Я заинтересован в роли [Data Analyst](position].
+      - Хочу работать в качестве [MLOps Engineer](position].
+      - Я хочу подать заявку на [Project Manager](position].
+      - Мне интересна позиция [Data Scientist](position].
+      - Я хотел бы претендовать на [Data Engineer](position].
+      - Меня интересует работа на должности [Data Analyst](position].
+      - Я стремлюсь занять роль [MLOps Engineer](position].
+      - Хочу подать заявку на [Project Manager](position].
+      - Я заинтересован в позиции [Data Scientist](position].
+      - Мне бы хотелось работать на позиции [Data Engineer](position].
+      - Я ищу работу на должность [Data Analyst](position].
+      - Подаю заявку на [MLOps Engineer](position].
+      - Я желаю присоединиться к команде как [Project Manager](position].
+      - Я хочу работать на позиции [Data Scientist](position].
+      - Мне интересно занять должность [Data Engineer](position].
+      - Я хочу претендовать на [Data Analyst](position].
+      - Я заинтересован в роли [MLOps Engineer](position].
+      - Хотелось бы работать в должности [Project Manager](position].
+      - Я подаю заявку на [Data Scientist](position].
+      - Я заинтересован в вакансии [Data Engineer](position].
+      - Мне бы хотелось претендовать на должность [Data Analyst](position].
+      - Я хочу присоединиться как [MLOps Engineer](position].
+      - Я заинтересован в работе на позиции [Project Manager](position].
+      - Хочу подать заявку на [Data Scientist](position].
+      - Я ищу возможность работать на позиции [Data Engineer](position].
+      - Я желаю занять роль [Data Analyst](position].
+      - Меня интересует работа как [MLOps Engineer](position].
+      - Я хочу работать на должности [Project Manager](position].
+
+  - intent: give_contact_information
+    examples: |
+        - Мой email [example@example.com](contact)
+        - Вы можете связаться со мной по телефону [+79991234567](contact)
+        - Контактный номер [81234567890](contact)
+        - Мой email: [user@domain.com](contact)
+
+  - intent: provide_skills
+    examples: |
+      # Project Manager
+      - У меня есть опыт управления проектами с использованием [Agile](skills) и [Scrum](skills).
+      - Я владею [Jira](skills) и [Trello](skills) для планирования проектов.
+      - Я успешно координировал работу кросс-функциональных команд с помощью [Asana](skills).
+      - У меня сильные коммуникативные навыки и опыт ведения переговоров с [Stakeholders](skills).
+      - Я умею управлять рисками и разрешать конфликты в проектах.
+  
+      # Data Analyst
+      - Я работал с [Python](skills) и [SQL](skills) для анализа данных.
+      - У меня опыт использования [Tableau](skills) и [Power BI](skills) для визуализации данных.
+      - Я знаком с методами [Exploratory Data Analysis](skills) и [Statistics](skills).
+      - Я умею создавать дашборды и отчеты с помощью [Excel](skills).
+      - У меня есть опыт обработки больших наборов данных с использованием [Pandas](skills).
+  
+      # Data Engineer
+      - Я разрабатывал ETL-процессы с использованием [Python](skills) и [Apache Spark](skills).
+      - У меня опыт работы с [SQL](skills) и [NoSQL](skills) базами данных.
+      - Я знаком с [Hadoop](skills) и [AWS](skills) для работы с большими данными.
+      - Я умею проектировать хранилища данных и моделировать данные.
+      - У меня есть опыт автоматизации потоков данных с помощью [Airflow](skills).
+  
+      # Data Scientist
+      - Я разрабатывал модели машинного обучения с использованием [TensorFlow](skills) и [scikit-learn](skills).
+      - У меня опыт анализа и обработки данных на [Python](skills) и [R](skills).
+      - Я знаком с методами [Feature Engineering](skills) и [Model Validation](skills).
+      - Я умею визуализировать результаты анализа с помощью [Matplotlib](skills) и [Seaborn](skills).
+      - У меня есть опыт работы с большими датасетами и сложными структурами данных.
+  
+      # MLOps Engineer
+      - Я развертывал модели ML с использованием [Docker](skills) и [Kubernetes](skills).
+      - У меня опыт настройки CI/CD процессов с помощью [Jenkins](skills) и [GitLab CI](skills).
+      - Я знаком с [Terraform](skills) и [Ansible](skills) для инфраструктуры как кода.
+      - Я умею мониторить производительность моделей в продакшене с использованием [Prometheus](skills).
+      - У меня есть опыт работы с облачными платформами, такими как [AWS SageMaker](skills) и [Google AI Platform](skills).
+    
+      # Project Manager
+      - Умею управлять командами с [Agile](skills) и [Scrum](skills).
+      - Владение [Jira](skills) и [Trello](skills) для планирования.
+      - Использую [Asana](skills) для координации задач.
+      - Опыт взаимодействия с [стейкхолдерами](skills).
+      - Могу организовать рабочий процесс и мотивировать команду.
+      - Знаю [Kanban](skills) и другие методологии.
+      - Владею [MS Project](skills) для управления проектами.
+      - Опыт работы с [Basecamp](skills) и [Monday.com](skills).
+      - Способен эффективно распределять ресурсы.
+      - Умею вести переговоры и достигать целей.
+  
+      # Data Analyst
+      - Знаю [Python](skills) и [SQL](skills) для анализа данных.
+      - Использую [Tableau](skills) и [Power BI](skills) для визуализации.
+      - Провожу [EDA](skills) и статистический анализ.
+      - Владение [Excel](skills) на продвинутом уровне.
+      - Опыт работы с [Pandas](skills) и [NumPy](skills).
+      - Умею работать с большими данными.
+      - Опыт создания дашбордов и отчетов.
+      - Знаю [R](skills) для статистического анализа.
+      - Владение [Looker](skills) для бизнес-аналитики.
+      - Опыт проведения A/B тестирований.
+  
+      # Data Engineer
+      - Разрабатываю ETL-пайплайны с [Python](skills) и [Apache Spark](skills).
+      - Работаю с [SQL](skills) и [NoSQL](skills) базами данных.
+      - Знаю [Hadoop](skills) и [AWS](skills) для обработки данных.
+      - Опыт внедрения [Airflow](skills) для оркестрации.
+      - Владение [Docker](skills) для контейнеризации.
+      - Опыт работы с [Kafka](skills) и [Flink](skills).
+      - Знаю [Terraform](skills) для инфраструктуры как кода.
+      - Опыт оптимизации производительности систем.
+      - Владение инструментами для мониторинга данных.
+      - Умею работать с большими и распределенными системами.
+  
+      # Data Scientist
+      - Разрабатываю модели ML с [TensorFlow](skills) и [scikit-learn](skills).
+      - Владею [Python](skills) и [R](skills) для анализа.
+      - Провожу [Feature Engineering](skills) и [Model Validation](skills).
+      - Создаю визуализации с [Matplotlib](skills) и [Seaborn](skills).
+      - Оптимизирую модели для повышения точности.
+      - Знаю [PyTorch](skills) и [Keras](skills).
+      - Опыт работы с нейронными сетями.
+      - Умею применять алгоритмы машинного обучения.
+      - Владение [Pandas](skills) и [NumPy](skills).
+      - Опыт работы с большими данными и их обработкой.
+  
+      # MLOps Engineer
+      - Настраиваю ML-процессы с [Docker](skills) и [Kubernetes](skills).
+      - Внедряю CI/CD конвейеры с [Jenkins](skills) и [GitLab CI](skills).
+      - Автоматизирую инфраструктуру с [Terraform](skills) и [Ansible](skills).
+      - Мониторинг моделей с [Prometheus](skills).
+      - Обеспечиваю деплой моделей на [AWS SageMaker](skills) и [Google AI Platform](skills).
+      - Опыт работы с [Helm](skills) и [Istio](skills).
+      - Знаю [Terraform](skills) для управления инфраструктурой.
+      - Владение инструментами для логирования и мониторинга.
+      - Опыт настройки масштабируемых систем.
+      - Умею автоматизировать рабочие процессы.
+      # Дополнительные примеры для разнообразия
+      - Я использовал [Git](skills) для контроля версий в предыдущих проектах.
+      - У меня есть опыт работы с [Azure DevOps](skills) для управления проектами.
+      - Я знаком с [BigQuery](skills) и [Redshift](skills) для анализа данных.
+      - Я умею автоматизировать рабочие процессы с помощью [Python](skills) скриптов.
+      - У меня опыт интеграции моделей ML в производственные системы.
+      - Я владею [R](skills) для статистического анализа данных.
+      - Я работал с [Kafka](skills) для обработки потоковых данных.
+      - У меня есть опыт оптимизации запросов в [SQL](skills) для повышения производительности.
+      - Я умею использовать [GitHub Actions](skills) для автоматизации CI/CD процессов.
+      - Я знаком с [ElasticSearch](skills) для поиска и анализа данных.
+  
+      # Повторяющиеся структуры с разными навыками
+      - Я работал с [Python](skills), [SQL](skills) и [Tableau](skills) в качестве аналитика данных.
+      - Мои навыки включают [Project Management](skills), [Jira](skills) и [Agile](skills).
+      - Я разрабатывал ETL-пайплайны с использованием [Spark](skills) и [Python](skills).
+      - Я внедрял модели ML с помощью [Docker](skills) и [Kubernetes](skills).
+      - Мои опыт включает [Data Cleaning](skills), [Feature Engineering](skills) и [Model Training](skills).
+  
+      # Дополнительно комбинируя навыки
+      - У меня есть опыт работы с [Azure](skills), [Python](skills) и [Power BI](skills).
+      - Я умею использовать [R](skills), [TensorFlow](skills) и [Docker](skills) в проектах.
+      - Я работал с [NoSQL](skills), [Spark](skills) и [Kafka](skills) для обработки данных.
+      - Мои навыки включают [Data Visualization](skills), [SQL](skills) и [Excel](skills).
+      - Я владею [Ansible](skills), [Terraform](skills) и [AWS](skills) для управления инфраструктурой.
+  
+      # Примеры с акцентом на опыт
+      - В прошлом проекте я использовал [Python](skills) и [scikit-learn](skills) для разработки ML-моделей.
+      - Я управлял проектами с использованием [Scrum](skills) и [Kanban](skills).
+      - Я оптимизировал базы данных с помощью [SQL](skills) и [NoSQL](skills).
+      - Я внедрял CI/CD пайплайны с использованием [Jenkins](skills) и [GitLab](skills).
+      - Я анализировал данные с помощью [Pandas](skills) и [NumPy](skills).
+  
+      # Продолжение комбинаций для достижения 300 примеров
+      - Я использовал [Power BI](skills) для создания интерактивных отчетов.
+      - У меня есть опыт работы с [Google Cloud](skills) и [AWS](skills).
+      - Я разрабатывал модели с использованием [PyTorch](skills) и [TensorFlow](skills).
+      - Я владею [Excel VBA](skills) для автоматизации задач.
+      - Я работал с [Hadoop](skills), [Spark](skills) и [Hive](skills).
+      - Я настроил мониторинг моделей с помощью [Prometheus](skills) и [Grafana](skills).
+      - Я использовал [Airflow](skills) для управления ETL-процессами.
+      - Я знаком с [Redshift](skills) и [BigQuery](skills) для хранения данных.
+      - Я развертывал приложения с помощью [Docker Compose](skills) и [Kubernetes](skills).
+      - Я управлял версиями кода с использованием [Git](skills) и [Bitbucket](skills).
+      - Я проводил A/B тестирование с помощью [Python](skills) и [R](skills).
+      - Я использовал [Selenium](skills) для автоматизации тестирования.
+      - Я работал с [ElasticSearch](skills) для индексирования и поиска данных.
+      - Я создавал REST API с использованием [Flask](skills) и [Django](skills).
+      - Я внедрял модели в продакшн с помощью [TensorFlow Serving](skills) и [TorchServe](skills).
+      - Я оптимизировал производительность запросов в [SQL](skills) базах данных.
+      - Я использовал [Matplotlib](skills) и [Seaborn](skills) для визуализации данных.
+      - Я работал с [Google Analytics](skills) для анализа пользовательских данных.
+      - Я внедрял машинное обучение в облачных средах с [AWS SageMaker](skills).
+      - Я управлял инфраструктурой с помощью [Terraform](skills) и [AWS CloudFormation](skills).
+      - Я разрабатывал скрипты автоматизации на [Python](skills) и [Bash](skills).
+      - Я использовал [Jupyter Notebooks](skills) для исследования данных.
+      - Я работал с [Pandas](skills) и [NumPy](skills) для обработки данных.
+      - Я внедрял CI/CD пайплайны с [CircleCI](skills) и [Travis CI](skills).
+      - Я использовал [PowerShell](skills) для автоматизации административных задач.
+      - Я работал с [Apache Kafka](skills) для потоковой обработки данных.
+      - Я использовал [Docker Swarm](skills) для оркестрации контейнеров.
+      - Я разрабатывал микросервисы с [Node.js](skills) и [Express](skills).
+      - Я использовал [GitHub Actions](skills) для автоматизации рабочего процесса.
+      - Я внедрял мониторинг с помощью [New Relic](skills) и [Datadog](skills).
+      - Я работал с [Spark SQL](skills) для обработки больших данных.
+      - Я использовал [Keras](skills) для создания нейронных сетей.
+      - Я работал с [PostgreSQL](skills) и [MySQL](skills) базами данных.
+      - Я использовал [Terraform](skills) для управления облачной инфраструктурой.
+      - Я управлял контейнерами с [Docker](skills) и [Podman](skills).
+      - Я использовал [RapidMiner](skills) для анализа данных.
+      - Я разработал модели с использованием [XGBoost](skills) и [LightGBM](skills).
+      - Я работал с [Firebase](skills) для разработки мобильных приложений.
+      - Я использовал [GraphQL](skills) для создания гибких API.
+      - Я внедрял модели с [MLflow](skills) для управления жизненным циклом моделей.
+      - Я использовал [Apache Beam](skills) для обработки потоковых данных.
+      - Я разрабатывал приложения на [React](skills) и [Angular](skills).
+      - Я использовал [Cassandra](skills) для распределенных баз данных.
+      - Я работал с [Snowflake](skills) для хранения и анализа данных.
+      - Я использовал [C++](skills) и [Java](skills) для разработки высокопроизводительных приложений.
+      - Я внедрял безопасность данных с [OAuth](skills) и [JWT](skills).
+      - Я использовал [Anaconda](skills) для управления средами Python.
+      - Я работал с [Apache NiFi](skills) для автоматизации потоков данных.
+      - Я использовал [OpenStack](skills) для управления облачной инфраструктурой.
+      - Я разрабатывал модели NLP с [spaCy](skills) и [NLTK](skills).
+      - Я использовал [Unity](skills) для разработки игровых приложений.
+      - Я работал с [GraphQL](skills) для эффективного запроса данных.
+      - Я использовал [Ruby on Rails](skills) для веб-разработки.
+      - Я внедрял модели с [Kubeflow](skills) для MLOps.
+      - Я использовал [HBase](skills) для масштабируемых баз данных.
+      - Я работал с [Elixir](skills) для разработки распределенных систем.
+      - Я использовал [VS Code](skills) и [PyCharm](skills) для разработки.
+      - Я внедрял CI/CD с [Bitbucket Pipelines](skills) и [Azure DevOps](skills).
+      - Я использовал [Power BI](skills) для бизнес-аналитики.
+      - Я работал с [SQLite](skills) для встроенных баз данных.
+      - Я использовал [D3.js](skills) для интерактивной визуализации данных.
+      - Я разрабатывал модели с [FastAI](skills) для глубокого обучения.
+      - Я использовал [RStudio](skills) для статистического анализа.
+      - Я работал с [Airbnb’s Superset](skills) для визуализации данных.
+      - Я использовал [Presto](skills) для распределенных SQL-запросов.
+      - Я внедрял модели с [ONNX](skills) для совместимости.
+      - Я использовал [Matlab](skills) для инженерного анализа.
+      - Я работал с [SAS](skills) для продвинутой статистики.
+      - Я использовал [Tableau Server](skills) для управления отчетами.
+      - Я разрабатывал скрипты на [Perl](skills) для автоматизации задач.
+      - Я использовал [Grafana](skills) для визуализации метрик.
+      - Я работал с [Couchbase](skills) для NoSQL решений.
+      - Я использовал [Chef](skills) для управления конфигурациями.
+      - Я внедрял модели с [Hugging Face Transformers](skills).
+      - Я использовал [LaTeX](skills) для подготовки отчетов.
+      - Я работал с [Flink](skills) для потоковой обработки данных.
+      - Я использовал [Dash](skills) для создания аналитических веб-приложений.
+      - Я разрабатывал приложения с [Vue.js](skills) и [Nuxt.js](skills).
+      - Я использовал [Terraform](skills) для инфраструктуры как кода.
+      - Я работал с [IBM Watson](skills) для AI решений.
+      - Я использовал [Puppet](skills) для управления конфигурациями.
+      - Я внедрял модели с [Deep Learning](skills) фреймворками.
+      - Я использовал [Bootstrap](skills) для фронтенд разработки.
+      - Я работал с [Postman](skills) для тестирования API.
+      - Я использовал [Swagger](skills) для документирования API.
+      - Я разрабатывал модели с [AutoML](skills) инструментами.
+      - Я использовал [Kibana](skills) для визуализации логов.
+      - Я работал с [Elastic Stack](skills) для обработки данных.
+      - Я использовал [Razor](skills) для веб-разработки.
+      - Я внедрял модели с [TF Serving](skills) для продакшн.
+      - Я использовал [Bootstrap](skills) и [Sass](skills) для стилизации веб-приложений.
+      - Я работал с [Graph Databases](skills) для специализированных задач.
+      - Я использовал [Clojure](skills) для функционального программирования.
+      - Я разрабатывал микросервисы с [Go](skills) и [Python](skills).
+      - Я использовал [Vim](skills) и [Emacs](skills) для разработки.
+      - Я работал с [Hazelcast](skills) для распределенного кеширования.
+      - Я использовал [MongoDB](skills) для документно-ориентированных баз данных.
+      - Я внедрял модели с [LightGBM](skills) для градиентного бустинга.
+      - Я использовал [JupyterLab](skills) для интерактивного анализа данных.
+      - Я работал с [Airflow](skills) для оркестрации рабочих процессов.
+      - Я использовал [Docker](skills) и [Kubernetes](skills) для контейнеризации и оркестрации.
+      - Я разрабатывал приложения с [Django](skills) и [Flask](skills).
+      - Я использовал [NumPy](skills) и [Pandas](skills) для обработки данных.
+      - Я работал с [Redis](skills) для in-memory хранения данных.
+      - Я использовал [Celery](skills) для управления задачами.
+      - Я внедрял модели с [TensorFlow](skills) и [Keras](skills).
+      - Я использовал [Scikit-learn](skills) для машинного обучения.
+      - Я работал с [PyTorch](skills) для глубокого обучения.
+      - Я использовал [OpenCV](skills) для компьютерного зрения.
+      - Я разрабатывал модели NLP с [BERT](skills) и [GPT](skills).
+      - Я использовал [Matplotlib](skills) и [Seaborn](skills) для визуализации данных.
+      - Я работал с [FastAPI](skills) для создания высокопроизводительных API.
+      - Я использовал [Spark](skills) для распределенной обработки данных.
+      - Я внедрял модели с [TensorFlow Lite](skills) для мобильных устройств.
+      - Я использовал [Pandas](skills) для анализа данных.
+      - Я работал с [Keras](skills) для создания нейронных сетей.
+      - Я использовал [Docker Compose](skills) для управления мультиконтейнерными приложениями.
+      - Я разрабатывал RESTful сервисы с [Flask](skills) и [Django](skills).
+      - Я использовал [NumPy](skills) для научных вычислений.
+      - Я работал с [Seaborn](skills) для статистической визуализации.
+      - Я использовал [Scikit-learn](skills) для построения ML-моделей.
+      - Я внедрял CI/CD процессы с [Jenkins](skills) и [Travis CI](skills).
+      - Я использовал [Git](skills) и [GitHub](skills) для управления кодом.
+      - Я работал с [SQL Server](skills) и [Oracle](skills) базами данных.
+      - Я использовал [Hadoop](skills) и [Spark](skills) для обработки больших данных.
+      - Я разрабатывал модели с [TensorFlow](skills) и [PyTorch](skills).
+      - Я использовал [Docker](skills) для контейнеризации приложений.
+      - Я работал с [Kubernetes](skills) для оркестрации контейнеров.
+      - Я использовал [AWS](skills) и [Azure](skills) для облачных решений.
+      - Я внедрял мониторинг с [Prometheus](skills) и [Grafana](skills).
+      - Я использовал [Terraform](skills) для управления инфраструктурой.
+      - Я работал с [Ansible](skills) для автоматизации развертывания.
+      - Я использовал [Python](skills) для разработки скриптов автоматизации.
+      - Я разрабатывал дашборды с [Tableau](skills) и [Power BI](skills).
+      - Я использовал [R](skills) для статистического анализа данных.
+      - Я работал с [MongoDB](skills) и [Cassandra](skills) для NoSQL решений.
+      - Я использовал [SQL](skills) для управления базами данных.
+      - Я разрабатывал модели машинного обучения с [scikit-learn](skills).
+      - Я использовал [PySpark](skills) для обработки больших данных.
+      - Я работал с [ElasticSearch](skills) для индексации и поиска данных.
+      - Я использовал [Kibana](skills) для визуализации логов и метрик.
+      - Я разрабатывал API с [Flask](skills) и [FastAPI](skills).
+      - Я использовал [Pandas](skills) и [NumPy](skills) для обработки и анализа данных.
+      - Я работал с [TensorFlow](skills) и [Keras](skills) для создания нейронных сетей.
+      - Я использовал [Docker](skills) и [Kubernetes](skills) для развертывания моделей.
+      - Я разрабатывал ETL-пайплайны с [Apache Airflow](skills) и [Luigi](skills).
+      - Я использовал [Git](skills) и [GitHub](skills) для контроля версий кода.
+      - Я работал с [AWS S3](skills) и [Azure Blob Storage](skills) для хранения данных.
+      - Я использовал [Jupyter Notebook](skills) для интерактивного анализа данных.
+      - Я разрабатывал модели с [XGBoost](skills) и [LightGBM](skills).
+      - Я использовал [Matplotlib](skills) и [Seaborn](skills) для визуализации результатов.
+      - Я работал с [PostgreSQL](skills) и [MySQL](skills) базами данных.
+      - Я использовал [Flask](skills) для создания веб-приложений.
+      - Я разрабатывал скрипты на [Python](skills) для автоматизации процессов.
+      - Я использовал [SQL](skills) для оптимизации запросов и улучшения производительности.
+      - Я работал с [Docker Compose](skills) для управления мультисервисными приложениями.
+      - Я использовал [Power BI](skills) для создания интерактивных отчетов и дашбордов.
+      - Я разрабатывал модели машинного обучения с [TensorFlow](skills) и [PyTorch](skills).
+      - Я использовал [Kubernetes](skills) для оркестрации контейнеров и масштабирования приложений.
+      - Я работал с [Apache Spark](skills) для распределенной обработки данных.
+      - Я использовал [Ansible](skills) для автоматизации развертывания инфраструктуры.
+      - Я разрабатывал API с [FastAPI](skills) для высокопроизводительных сервисов.
+      - Я использовал [Prometheus](skills) и [Grafana](skills) для мониторинга систем.
+      - Я работал с [ElasticSearch](skills) для эффективного поиска и аналитики данных.
+      - Я использовал [Terraform](skills) для управления облачной инфраструктурой.
+
+  - intent: provide_salary
+    examples: |
+      - Я ожидаю зарплату [100000](expected_salary).
+      - Хочу получать около [120000](expected_salary).
+      - Мне нужна зарплата в районе [150000](expected_salary).
+      - Ожидаю получать примерно [90000](expected_salary).
+      - Надеюсь на зарплату около [110000](expected_salary).
+      - Хочу, чтобы моя зарплата была [130000](expected_salary).
+      - Моя целевая зарплата составляет [140000](expected_salary).
+      - Я рассчитываю на зарплату [160000](expected_salary).
+      - Ожидаю, что зарплата будет [180000](expected_salary).
+      - Хочу получать не менее [200000](expected_salary).
+      - Я хочу зарплату в размере [170000](expected_salary).
+      - Надеюсь на доход около [190000](expected_salary).
+      - Я планирую зарабатывать [220000](expected_salary).
+      - Мне нужна зарплата в пределах [250000](expected_salary).
+      - Ожидаю, что моя зарплата будет [300000](expected_salary).
+      - Хочу получать где-то [130000](expected_salary).
+      - Я рассчитываю на сумму [125000](expected_salary).
+      - Надеюсь на зарплату в размере [135000](expected_salary).
+      - Моя цель — зарплата [145000](expected_salary).
+      - Я хотел бы получать [155000](expected_salary).
+      - Ожидаю, что зарплата составит [165000](expected_salary).
+      - Мне нужна зарплата около [175000](expected_salary).
+      - Я надеюсь на сумму в районе [185000](expected_salary).
+      - Хочу, чтобы моя зарплата была не менее [195000](expected_salary).
+      - Я рассчитываю на доход в размере [205000](expected_salary).
+      - Надеюсь получать около [215000](expected_salary).
+      - Ожидаю зарплату в пределах [225000](expected_salary).
+      - Мне нужна сумма около [235000](expected_salary).
+      - Я хотел бы получать примерно [245000](expected_salary).
+      - Моя целевая зарплата составляет [255000](expected_salary).
+      - Я рассчитываю на зарплату в размере [265000](expected_salary).
+      - Ожидаю, что моя зарплата будет около [275000](expected_salary).
+      - Хочу получать не менее [285000](expected_salary).
+      - Я надеюсь на доход в размере [295000](expected_salary).
+      - Готов рассмотреть предложения от [305000](expected_salary).
+      - Я хотел бы получать где-то [315000](expected_salary).
+      - Ожидаю, что зарплата составит [325000](expected_salary).
+      - Мне нужна зарплата в пределах [335000](expected_salary).
+      - Я рассчитываю на сумму около [345000](expected_salary).
+      - Надеюсь на доход в размере [355000](expected_salary).
+      - Моя ожидаемая зарплата [100000](expected_salary) рублей.
+      - Я рассчитываю на [120000](expected_salary) рублей.
+      - Желательная зарплата около [150000](expected_salary).
+      - Оценивая себя в [90000](expected_salary) рублей в месяц.
+      - Оцениваю свои навыки в [110000](expected_salary).
+      - Хотел(а) бы получать от [130000](expected_salary).
+      - Рассчитываю на [140000](expected_salary) рублей.
+      - Желаю [160000](expected_salary) рублей.
+      - Моя зарплата должна быть [180000](expected_salary).
+      - Ожидаю заработок [200000](expected_salary) рублей.
+      - Моя желаемая сумма — [170000](expected_salary).
+      - Предпочитаю [190000](expected_salary) рублей.
+      - Целевая зарплата до [220000](expected_salary) рублей.
+      - Рассчитываю на зарплату до [250000](expected_salary) рублей.
+      - Ожидаю [300000](expected_salary) рублей.
+      - Желательная сумма — [130000](expected_salary).
+      - Могу принять от [125000](expected_salary) рублей.
+      - Предпочитаю [135000](expected_salary).
+      - Рассчитываю на [145000](expected_salary) рублей.
+      - Желаю [155000](expected_salary) рублей.
+      - Ожидаю [165000](expected_salary) рублей.
+      - Моя цель — [175000](expected_salary) рублей.
+      - Желаю [185000](expected_salary) рублей.
+      - Рассчитываю на [195000](expected_salary) рублей.
+      - Предпочитаю [205000](expected_salary) рублей.
+      - Желаю [215000](expected_salary) рублей.
+      - Ожидаю [225000](expected_salary) рублей.
+      - Моя целевая сумма — [235000](expected_salary).
+      - Предпочитаю [245000](expected_salary) рублей.
+      - Ожидаю [255000](expected_salary) рублей.
+      - Рассчитываю на [265000](expected_salary) рублей.
+      - Желаю [275000](expected_salary) рублей.
+      - Предпочитаю [285000](expected_salary) рублей.
+      - Ожидаю [295000](expected_salary) рублей.
+      - Хотел(а) бы [305000](expected_salary) рублей.
+      - Предпочитаю [315000](expected_salary) рублей.
+      - Рассчитываю на [325000](expected_salary) рублей.
+      - Желаю [335000](expected_salary) рублей.
+      - Моя цель — [345000](expected_salary) рублей.
+      - Предпочитаю [355000](expected_salary) рублей.
+
+  - intent: provide_experience
+    examples: |
+      - У меня [3](experience) года опыта работы в качестве Project Manager.
+      - Я работал в компании X в роли Data Analyst на протяжении [2](experience) лет.
+      - У меня есть [5](experience) лет опыта в качестве Data Engineer.
+      - Я проработал в компании Y более [4](experience) лет как Data Scientist.
+      - У меня [1](experience) год стажа в MLOps Engineer.
+      - Я занимал должность Project Manager в компании Z на протяжении [6](experience) лет.
+      - У меня [2](experience) года опыта работы в качестве Data Analyst.
+      - Я работал в команде A в роли Data Engineer около [3](experience) лет.
+      - У меня есть опыт работы в компании B как Data Scientist более [5](experience) лет.
+      - Я проработал в стартапе C в роли MLOps Engineer около [9](experience) месяцев.
+      - У меня [4](experience) года опыта в управлении проектами как Project Manager.
+      - Я работал в компании D более [7](experience) лет как Data Analyst.
+      - У меня есть [3](experience) года опыта в качестве Data Engineer.
+      - [3](experience) года
+      - Около [2](experience) лет
+      - Чуть больше [2](experience) лет
+
+  - intent: get_feedback
+    examples: |
+        - Можете дать фидбек по моему резюме?
+        - Я хотел бы узнать результат скрининга
+        - Есть ли обратная связь по моему заявлению?
+        - Поделитесь, пожалуйста, результатами первичного отбора
+        - Каков результат моего интервью?    
+
+  - intent: end_conversation
+    examples: |
+      - Спасибо за информацию.
+      - До свидания!
+      - Хорошего дня!
+      - Благодарю за беседу.
+      - Всего доброго!
+      - Пока!
+      - Удачи!
+      - Буду ждать вашего ответа.
+      - Спасибо за уделенное время.
+      - Приятного дня!
+
+  - intent: provide_contact
+    examples: |
+      - [alex.fet@mail.ru](contact)
+      - [+79999999999](contact)
+      - мой номер [+7400359020](contact)
+      - моя почта [fasfas@yandex.ru](contact)
+      - свяжитесь со мной по email [example@gmail.com](contact)
+      - номер телефона [+1234567890](contact)
+      - электронная почта [user@example.com](contact)
+      - оставить номер [+9876543210](contact)
+      - отправьте мне письмо на [test@mail.com](contact)
+      - мой контактный номер [+71234567890](contact)
+      - моя почта [contact@domain.com](contact)
+      - можете позвонить мне на [+380501234567](contact)
+      - напишите на email [first.last@service.org](contact)
+      - номер моего телефона [+442071838750](contact)
+      - адрес электронной почты [hello@world.net](contact)
+
+  - intent: nlu_fallback
+    examples: |
+      - asdasdasd
+      - qwerty
+      - sdfghjkl
+      - zxcvbnm

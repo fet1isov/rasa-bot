@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+  - story: Успешная подача заявки - Data Scientist
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: apply_position
+        entities:
+          - position: "Data Scientist"
+      - action: job_application_form
+      - active_loop: job_application_form
+      - action: validate_job_application_form
+      - action: action_evaluate_candidate
+      - intent: get_feedback
+      - action: utter_feedback_acceptance
+
+  - story: Подача заявки - недостаточно навыков
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: apply_position
+        entities:
+          - position: "Data Engineer"
+      - action: job_application_form
+      - active_loop: job_application_form
+      - action: validate_job_application_form
+      - action: action_evaluate_candidate
+
+  - story: Прерывание разговора на середине
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: apply_position
+        entities:
+          - position: "Data Analyst"
+      - action: job_application_form
+      - active_loop: job_application_form
+      - intent: end_conversation
+      - action: utter_end_conversation
+      - active_loop: null
+
+#  - story: Fallback during form filling
+#    steps:
+#      - intent: greet
+#      - action: utter_greet
+#      - intent: apply_position
+#        entities:
+#          - position: "Data Analyst"
+#      - action: job_application_form
+#      - active_loop: job_application_form
+#      - intent: nlu_fallback
+#      - action: utter_default
+#      - action: action_handle_fallback
+#      - active_loop: job_application_form

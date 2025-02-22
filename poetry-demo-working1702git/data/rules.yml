@@ -1,0 +1,28 @@
+rules:
+  - rule: Handle fallback inside form
+    condition:
+      - active_loop: job_application_form
+    steps:
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - active_loop: job_application_form
+
+  - rule: Handle fallback outside form
+    steps:
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - active_loop: null
+
+  - rule: End conversation
+    steps:
+      - intent: end_conversation
+      - action: utter_end_conversation
+      - active_loop: null
+
+  - rule: Submit job_application_form
+    condition:
+      - active_loop: job_application_form
+    steps:
+      - action: job_application_form
+      - active_loop: null
+      - action: action_evaluate_candidate

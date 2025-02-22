@@ -1,0 +1,116 @@
+version: "3.1"
+
+intents:
+  - greet
+  - apply_position
+  - give_contact_information
+  - provide_skills
+  - provide_salary
+  - provide_experience
+  - get_feedback
+  - provide_contact
+  - end_conversation
+  - nlu_fallback  # Добавлено для fallback
+
+entities:
+  - position
+  - skills
+  - expected_salary
+  - experience
+  - contact
+
+slots:
+  position:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: position
+
+  skills:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: skills
+
+  expected_salary:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: expected_salary
+
+  experience:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: experience
+
+  contact:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: contact
+
+  feedback_required:
+    type: bool
+    initial_value: False
+    mappings:
+      - type: from_intent
+        intent: get_feedback
+        value: true
+
+  fallback_count:
+    type: float
+    initial_value: 0
+    mappings: []
+
+
+forms:
+  job_application_form:
+    required_slots:
+      - position
+      - contact
+      - skills
+      - experience
+      - expected_salary
+
+
+responses:
+  utter_greet:
+    - text: "Здравствуйте! Рад приветствовать вас на нашем собеседовании. На какую позицию вы хотите подать заявку?"
+
+  utter_ask_position:
+    - text: "На какую позицию вы хотите подать заявку? Мы предлагаем следующие позиции: Project Manager, Data Analyst, Data Engineer, Data Scientist, MLOps Engineer."
+
+  utter_ask_contact:
+    - text: "Пожалуйста, предоставьте ваши контактные данные (электронная почта или телефон)."
+
+  utter_ask_skills:
+    - text: "Расскажите о ваших навыках, пожалуйста."
+
+  utter_ask_experience:
+    - text: "Укажите, пожалуйста, ваш суммарный опыт в годах на данной должности."
+
+  utter_ask_expected_salary:
+    - text: "Какой уровень ожидаемой зарплаты вы рассматриваете (в рублях)?"
+
+  utter_end_conversation:
+    - text: "Спасибо за ваше время! Мы свяжемся с вами в ближайшее время."
+
+  utter_feedback_rejection:
+    - text: "К сожалению, вы не соответствуете требованиям выбранной позиции. Спасибо за интерес к нашей компании."
+
+  utter_feedback_acceptance:
+    - text: "Спасибо за предоставленную информацию! Мы свяжемся с вами для дальнейших шагов."
+
+  utter_default:
+    - text: "Извините, я вас не понял. Можете переформулировать?"
+
+actions:
+  - action_evaluate_candidate
+  - validate_job_application_form
+  - action_handle_fallback  # Добавлено новое действие для обработки fallback
